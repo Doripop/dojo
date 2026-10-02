@@ -1,0 +1,83 @@
+@import "../common.scss";
+$new-main-bg: url("../../image/newMainBackground.png");
+$new-main-title: url("../../image/mainTitle.png");
+$link-btn-chat: url("../../image/chatLink.png");
+$link-btn-arena: url("../../image/arenaLink.png");
+$link-btn-about: url("../../image/aboutLink.png");
+$link-btn-chat-hover: url("../../image/chatHoverLink.png");
+$link-btn-arena-hover: url("../../image/arenaHoverLink.png");
+$link-btn-about-hover: url("../../image/aboutHoverLink.png");
+
+.new-main-page {
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: $new-main-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .new-main-title {
+    width: 660px;
+    height: 243px;
+    background-image: $new-main-title;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 40px;
+  }
+
+  .new-main-link-btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 100px;
+
+    .link-btn-chat {
+      width: 134px;
+      height: 48px;
+      margin: 0 20px;
+      background-image: $link-btn-chat;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-chat-hover;
+      }
+    }
+
+    .link-btn-arena {
+      width: 134px;
+      height: 48px;
+      background-image: $link-btn-arena;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-arena-hover;
+      }
+    }
+
+    .link-btn-about {
+      width: 134px;
+      height: 48px;
+      background-image: $link-btn-about;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-about-hover;
+      }
+    }
+  }
+}

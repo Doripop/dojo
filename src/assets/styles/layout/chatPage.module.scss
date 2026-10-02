@@ -1,0 +1,233 @@
+@import "../common.scss";
+$new-main-bg: url("../../image/newMainBackground.png");
+$confucius-card: url("../../image/confuciusCard.png");
+$buddha-card: url("../../image/buddhaCard.png");
+$zhuangzhou-card: url("../../image/zhuangzhouCard.png");
+$plato-card: url("../../image/platoCard.png");
+$aristotle-card: url("../../image/aristotleCard.png");
+$descartes-card: url("../../image/descartesCard.png");
+$johnlocke-card: url("../../image/johnlockeCard.png");
+$immanuelkant-card: url("../../image/immanuelkantCard.png");
+$friedrichnietzsche-card: url("../../image/friedrichnietzscheCard.png");
+$hanfeizi-card: url("../../image/hanfeiziCard.png");
+$confucius-card-hover: url("../../image/confuciusCardHover.png");
+$buddha-card-hover: url("../../image/buddhaCardHover.png");
+$zhuangzhou-card-hover: url("../../image/zhuangzhouCardHover.png");
+$plato-card-hover: url("../../image/platoCardHover.png");
+$aristotle-card-hover: url("../../image/aristotleCardHover.png");
+$descartes-card-hover: url("../../image/descartesCardHover.png");
+$johnlocke-card-hover: url("../../image/johnlockeCardHover.png");
+$immanuelkant-card-hover: url("../../image/immanuelkantCardHover.png");
+$friedrichnietzsche-card-hover: url("../../image/friedrichnietzscheCardHover.png");
+$hanfeizi-card-hover: url("../../image/hanfeiziCardHover.png");
+
+.chat-page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  background-image: $new-main-bg;
+  background-size: cover;
+  background-position: center;
+
+  .chat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 75px;
+
+    .chat-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 13px;
+
+      h2 {
+        color: #584c3e;
+        text-align: center;
+        // font-family: Pretendard;
+        // font-size: 34px;
+        // font-style: normal;
+        // font-weight: 500;
+        line-height: 36px; /* 105.882% */
+        letter-spacing: -0.68px;
+        @include fontFamily("SILKSCREEN_XL", "silkscreen");
+      }
+
+      p {
+        color: #887a69;
+        text-align: center;
+        // font-family: Pretendard;
+        // font-size: 20px;
+        // font-style: normal;
+        // font-weight: 600;
+        @include fontFamily("SILKSCREEN_L", "silkscreen");
+        line-height: normal;
+        letter-spacing: -0.2px;
+      }
+    }
+
+    .chat-body {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slide-in 0.5s ease-out forwards;
+
+      @keyframes slide-in {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .select-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: calc((100% / 5) - 20px);
+        min-width: 203px;
+        height: 266px;
+        gap: 23px;
+        cursor: pointer;
+
+        &.confucius {
+          background-image: $confucius-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          &:hover {
+            background-image: $confucius-card-hover;
+          }
+        }
+        &.buddha {
+          background-image: $buddha-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $buddha-card-hover;
+          }
+        }
+        &.zhuangzhou {
+          background-image: $zhuangzhou-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $zhuangzhou-card-hover;
+          }
+        }
+        &.plato {
+          background-image: $plato-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $plato-card-hover;
+          }
+        }
+        &.aristotle {
+          background-image: $aristotle-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $aristotle-card-hover;
+          }
+        }
+        &.renédescartes {
+          background-image: $descartes-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $descartes-card-hover;
+          }
+        }
+        &.johnlocke {
+          background-image: $johnlocke-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $johnlocke-card-hover;
+          }
+        }
+        &.immanuelkant {
+          background-image: $immanuelkant-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $immanuelkant-card-hover;
+          }
+        }
+        &.friedrichnietzsche {
+          background-image: $friedrichnietzsche-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $friedrichnietzsche-card-hover;
+          }
+        }
+        &.hanfeizi {
+          background-image: $hanfeizi-card;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-image: $hanfeizi-card-hover;
+          }
+        }
+
+        // &:hover {
+        //   transform: scale(1.05);
+        //   box-shadow: 0 8px 25px 3px #d9cbb8;
+        // }
+
+        // &:nth-last-child(1) {
+        //   padding: 54px 0 18px 0;
+        // }
+
+        // .card-text {
+        //   gap: 3px;
+
+        //   h3 {
+        //     color: #584c3e;
+        //     text-align: center;
+        //     font-family: Pretendard;
+        //     font-size: 18px;
+        //     font-style: normal;
+        //     font-weight: 500;
+        //     line-height: normal;
+        //     letter-spacing: -0.18px;
+        //   }
+        //   p {
+        //     color: #887a69;
+        //     text-align: center;
+        //     font-family: Pretendard;
+        //     font-size: 16px;
+        //     font-style: normal;
+        //     font-weight: 600;
+        //     line-height: normal;
+        //     letter-spacing: -0.16px;
+        //   }
+        // }
+      }
+    }
+  }
+}

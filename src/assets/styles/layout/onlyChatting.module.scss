@@ -1,0 +1,279 @@
+@import "../common.scss";
+$buddha: url("../../image/profile/buddha.png");
+$confucius: url("../../image/profile/confucius.png");
+$zhuangzhou: url("../../image/profile/zhuangzhou.png");
+$plato: url("../../image/profile/plato.png");
+$aristotle: url("../../image/profile/aristotle.png");
+$descartes: url("../../image/profile/descartes.png");
+$locke: url("../../image/profile/johnlocke.png");
+$kant: url("../../image/profile/immanuelkant.png");
+$nietzsche: url("../../image/profile/friedrichnietzsche.png");
+$hanfeizi: url("../../image/profile/hanfeizi.png");
+$send-icon: url("../../image/chatArrow.png");
+
+.only-chatting {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #685e1b;
+
+  &.buddha {
+    background-color: #b26012;
+  }
+  &.confucius {
+    background-color: #675f25;
+  }
+  &.zhuangzhou {
+    background-color: #332d29;
+  }
+  &.plato {
+    background-color: #b24c47;
+  }
+  &.aristotle {
+    background-color: #b28736;
+  }
+  &.renédescartes {
+    background-color: #804068;
+  }
+  &.johnlocke {
+    background-color: #407f7e;
+  }
+  &.immanuelkant {
+    background-color: #40804a;
+  }
+  &.friedrichnietzsche {
+    background-color: #7f5040;
+  }
+  &.hanfeizi {
+    background-color: #725d3f;
+  }
+
+  .chat-content-body {
+    width: 100%;
+    // height: 100%;
+    height: calc(100% - 72px);
+    padding: 32px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-top: 1px solid #131317;
+
+    .chat-header-profile {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      .profile-image-container {
+        position: relative;
+        width: 148px;
+        height: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .chat-sopy-profile {
+          width: 148px;
+          height: 148px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.buddha {
+            background-image: $buddha;
+            background-size: cover;
+            background-position: center;
+          }
+          &.confucius {
+            background-image: $confucius;
+            background-size: cover;
+            background-position: center;
+          }
+          &.zhuangzhou {
+            background-image: $zhuangzhou;
+            background-size: cover;
+            background-position: center;
+          }
+          &.plato {
+            background-image: $plato;
+            background-size: cover;
+            background-position: center;
+          }
+          &.aristotle {
+            background-image: $aristotle;
+            background-size: cover;
+            background-position: center;
+          }
+          &.renédescartes {
+            background-image: $descartes;
+            background-size: cover;
+            background-position: center;
+          }
+          &.johnlocke {
+            background-image: $locke;
+            background-size: cover;
+            background-position: center;
+          }
+          &.immanuelkant {
+            background-image: $kant;
+            background-size: cover;
+            background-position: center;
+          }
+          &.friedrichnietzsche {
+            background-image: $nietzsche;
+            background-size: cover;
+            background-position: center;
+          }
+          &.hanfeizi {
+            background-image: $hanfeizi;
+            background-size: cover;
+            background-position: center;
+          }
+
+          // svg {
+          //   width: 70px;
+          //   height: 70px;
+          // }
+        }
+      }
+
+      .header-profile-text-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        h2 {
+          color: #fff;
+          text-align: center;
+          font-size: 20px;
+          font-style: normal;
+          letter-spacing: -0.2px;
+          @include fontFamily("PIXEL_L", "angeris");
+        }
+        p {
+          color: #fff;
+          text-align: center;
+          font-family: Pretendard;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+
+    .chat-footer {
+      width: 80%;
+      border: 2px solid #131317;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 8px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        border-radius: 5px;
+        background-color: transparent;
+        font-family: Rubik;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 129.412% */
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .send-button {
+        width: 40px;
+        height: 40px;
+        background-image: $send-icon;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.chat-interface {
+  width: 80%;
+  height: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  .loading-spinner-container {
+    border: none;
+    border-radius: 12px;
+    background-color: #f8e7d0;
+    padding: 10px 16px;
+    width: max-content;
+    max-width: 350px;
+    margin-left: 16px;
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly below */
+    animation: bubbleFadeIn 0.7s ease-out forwards; /* Animation */
+
+    @keyframes bubbleFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .loading-spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #584c3e;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@mixin fontFamily($fontSize, $fontType: "pretendard") {
+  font-size: 16px;
+
+  @if $fontType == "silkscreen" {
+    font-family: "Silkscreen", monospace;
+  } @else if $fontType == "pixel" {
+    font-family: "Press Start 2P", monospace;
+  } @else if $fontType == "angeris" {
+    font-family: "Angeris Pixel Demo", "Press Start 2P", monospace;
+  } @else if $fontType == "helvetica63" {
+    font-family:
+      "Helvetica63-ExtendedMedium", "Helvetica Neue", "Helvetica", Arial,
+      sans-serif;
+  } @else {
+    font-family: "pretendard";
+  }
+
+  // 일반 사이즈들
+  @if $fontSize == "BODY_M" {
+    font-size: 16px;
+    font-weight: 400;
+  } @else if $fontSize == "BODY_M_M" {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+  } @else if $fontSize == "BODY_SM_M" {
+    font-size: 12px;
+    font-weight: 500;
+  } @else if $fontSize == "BODY_SM_SB" {
+    font-size: 12px;
+    font-weight: 600;
+  } @else if $fontSize == "BODY_SM_R" {
+    font-size: 12px;
+    font-weight: 300;
+  } @else if $fontSize == "BODY_M_SB" {
+    font-size: 14px;
+    font-weight: 600;
+  } @else if $fontSize == "BODY_LG_SB" {
+    font-size: 16px;
+    font-weight: 500;
+  } @else if $fontSize == "BODY_LG_M" {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  } @else if $fontSize == "HEAD_PC_XL" {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 130%;
+  } @else if $fontSize == "HEAD_PC_L" {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+  } @else if $fontSize == "HEAD_PC_M" {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  } @else if $fontSize == "SILKSCREEN_XL" {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+  } @else if $fontSize == "SILKSCREEN_L" {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+  } @else if $fontSize == "SILKSCREEN_M" {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+  } @else if $fontSize == "SILKSCREEN_S" {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+  } @else if $fontSize == "PIXEL_XL" {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 130%;
+  } @else if $fontSize == "PIXEL_L" {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+  } @else if $fontSize == "PIXEL_M" {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  } @else if $fontSize == "PIXEL_S" {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+  } @else if $fontSize == "HELVETICA_XL" {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 130%;
+  } @else if $fontSize == "HELVETICA_L" {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+  } @else if $fontSize == "HELVETICA_M" {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+  } @else if $fontSize == "HELVETICA_S" {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+  } @else if $fontSize == "HELVETICA_XS" {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+}

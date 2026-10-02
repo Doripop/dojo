@@ -1,0 +1,101 @@
+@import "../common.scss";
+
+.guide-accordion-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+
+  .guide-accordion-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 8px;
+    border-top: 1px solid #acb4c0;
+    border-bottom: 1px solid #d1d5db;
+
+    &.close {
+      border-bottom: none;
+    }
+
+    h1 {
+      @include fontFamily("BODY_M_SB");
+    }
+
+    .accordion-arrow {
+      cursor: pointer;
+
+      &.open {
+        transform: rotate(0);
+        transition: transform 0.4s ease-out;
+      }
+
+      &.close {
+        transform: rotate(180deg);
+        transition: transform 0.4s ease-out;
+      }
+    }
+  }
+
+  .guide-accordion-desc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.2s ease-out,
+      0.2s ease-out;
+
+    &.open {
+      padding: 28px 8px;
+      max-height: 500px; // 충분한 값으로 설정 (JS에서 동적으로 변경 가능)
+    }
+
+    &.close {
+      max-height: 0;
+      padding: 0 8px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 150%;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+
+    .link-program {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 150%;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 150%;
+      font-weight: 600;
+      color: #b36d6d;
+      text-decoration: underline;
+    }
+
+    span + a {
+      margin-top: 8px;
+    }
+
+    a + a {
+      margin-top: 4px;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #acb4c0;
+  }
+}
+
+// .guide-accordion-wrap + .guide-accordion-wrap {
+//   margin-top: 28px;
+// }

@@ -1,0 +1,158 @@
+@import "../common.scss";
+$buddha: url("../../image/profile/buddha.png");
+$confucius: url("../../image/profile/confucius.png");
+$zhuangzhou: url("../../image/profile/zhuangzhou.png");
+$plato: url("../../image/profile/plato.png");
+$aristotle: url("../../image/profile/aristotle.png");
+$descartes: url("../../image/profile/descartes.png");
+$locke: url("../../image/profile/johnlocke.png");
+$kant: url("../../image/profile/immanuelkant.png");
+$nietzsche: url("../../image/profile/friedrichnietzsche.png");
+$hanfeizi: url("../../image/profile/hanfeizi.png");
+
+.bubble-box {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  gap: 12px;
+
+  &.user {
+    justify-content: flex-end;
+
+    .bubble-svg {
+      order: 2;
+    }
+
+    .bubble-chat-detail {
+      .bubble-name {
+        text-align: end;
+      }
+
+      .bubble {
+        background-color: #f8e7d0;
+
+        .bubble-text {
+          color: #403e39;
+          font-feature-settings: "liga" off;
+          font-family: Pretendard;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px; /* 137.5% */
+        }
+      }
+    }
+  }
+
+  .bubble-svg {
+    display: flex;
+    align-items: flex-end;
+
+    div {
+      height: 40px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .bubble-chat-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    .bubble-name {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+      opacity: 0; /* Start fully transparent */
+      transform: translateY(20px); /* Start slightly below */
+      animation: bubbleFadeIn 0.9s ease-out forwards; /* Animation */
+
+      &.buddha {
+        background-image: $buddha;
+        background-size: cover;
+        background-position: center;
+      }
+      &.confucius {
+        background-image: $confucius;
+        background-size: cover;
+        background-position: center;
+      }
+      &.zhuangzhou {
+        background-image: $zhuangzhou;
+        background-size: cover;
+        background-position: center;
+      }
+      &.plato {
+        background-image: $plato;
+        background-size: cover;
+        background-position: center;
+      }
+      &.aristotle {
+        background-image: $aristotle;
+        background-size: cover;
+        background-position: center;
+      }
+      &.renédescartes {
+        background-image: $descartes;
+        background-size: cover;
+        background-position: center;
+      }
+      &.johnlocke {
+        background-image: $locke;
+        background-size: cover;
+        background-position: center;
+      }
+      &.immanuelkant {
+        background-image: $kant;
+        background-size: cover;
+        background-position: center;
+      }
+      &.friedrichnietzsche {
+        background-image: $nietzsche;
+        background-size: cover;
+        background-position: center;
+      }
+      &.hanfeizi {
+        background-image: $hanfeizi;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .bubble {
+      border: 2px solid #131317;
+      background-color: #f8e7d0;
+      padding: 10px 16px;
+      max-width: 400px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: bubbleFadeIn 0.9s ease-out forwards;
+
+      .bubble-text {
+        margin: 0;
+        color: #403e39;
+        font-feature-settings: "liga" off;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 137.5% */
+      }
+    }
+
+    @keyframes bubbleFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

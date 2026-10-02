@@ -1,0 +1,141 @@
+@import "../common.scss";
+
+.modal-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .modal-background {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(105, 105, 105, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .modal-view {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 960px;
+    background-color: #f8efe3;
+    padding: 40px;
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .modal-title {
+        font-family: manrope;
+        line-height: 28px;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 20px 16px 12px;
+        margin: 0;
+      }
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 12px;
+      padding: 0 16px 24px;
+
+      h2 {
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.48px;
+        color: #584c3e;
+        margin: 0;
+      }
+
+      h3 {
+        font-family: Pretendard;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        color: #584c3e;
+        margin: 0;
+      }
+
+      p {
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        color: #584c3e;
+        margin: 0;
+      }
+
+      a {
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        color: rgb(105, 115, 136);
+        text-decoration: underline;
+      }
+    }
+
+    .modal-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+        width: 70%;
+        border: none;
+        cursor: pointer;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        color: #ffffff;
+        background-color: hsl(33, 5%, 56%);
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      button {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        color: #887a69;
+        padding: 12px 24px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "./mixins";
+@import "./reset";
+@import "./variables";
+@import "./font";
+
+.main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #f8efe3;
+
+  .content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 34px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out forwards;
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 1024px;
+      min-height: 402px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 402px;
+        object-fit: contain;
+      }
+
+      .image-loading {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: #887a69;
+        font-family: Pretendard;
+        font-size: 16px;
+
+        .loading-spinner {
+          width: 40px;
+          height: 40px;
+          border: 3px solid #f3f3f3;
+          border-top: 3px solid #584c3e;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+      }
+
+      .image-error {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d32f2f;
+        font-family: Pretendard;
+        font-size: 16px;
+        background-color: #ffebee;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ffcdd2;
+      }
+    }
+
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 21px;
+
+      h1 {
+        color: #584c3e;
+        text-align: center;
+        @include fontFamily("SILKSCREEN_XL", "silkscreen");
+      }
+
+      p {
+        color: #887a69;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.24px;
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

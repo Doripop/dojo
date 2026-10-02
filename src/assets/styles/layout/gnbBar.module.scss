@@ -1,0 +1,95 @@
+@import "../common.scss";
+$link-btn-chat: url("../../image/chatLink.png");
+$link-btn-arena: url("../../image/arenaLink.png");
+$link-btn-about: url("../../image/aboutLink.png");
+$link-btn-chat-hover: url("../../image/chatHoverLink.png");
+$link-btn-arena-hover: url("../../image/arenaHoverLink.png");
+$link-btn-about-hover: url("../../image/aboutHoverLink.png");
+$backspace-icon: url("../../image/backspace.png");
+
+.gnb-bar {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+
+  &.arena-active {
+    background-color: #613826;
+    border-bottom: 6px solid #311b12;
+  }
+
+  .backspace {
+    width: 40px;
+    height: 40px;
+    backdrop-filter: none !important;
+    cursor: pointer;
+    background-image: $backspace-icon;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .menu-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    .onlyChat {
+      width: 134px;
+      height: 48px;
+      margin: 0 16px;
+      background-image: $link-btn-chat;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-chat-hover;
+      }
+
+      &.disabled {
+        background-image: $link-btn-chat-hover;
+        cursor: default;
+      }
+    }
+
+    .arena {
+      width: 134px;
+      height: 48px;
+      background-image: $link-btn-arena;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-arena-hover;
+      }
+      &.disabled {
+        background-image: $link-btn-arena-hover;
+        cursor: default;
+      }
+    }
+
+    .about {
+      width: 134px;
+      height: 48px;
+      background-image: $link-btn-about;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      &:hover {
+        background-image: $link-btn-about-hover;
+      }
+      &.disabled {
+        background-image: $link-btn-about-hover;
+        cursor: default;
+      }
+    }
+  }
+}

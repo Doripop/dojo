@@ -1,0 +1,314 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  color: #1a1a1a;
+  font-family: "Pretendard", sans-serif;
+  font-feature-settings: "pnum" on, "lnum" on, "cv13" on;
+  font-size: 100%;
+  letter-spacing: 0;
+  vertical-align: baseline;
+  word-break: keep-all;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  --antd-wave-shadow-color: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  color: inherit;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ol,
+ul,
+dl {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: initial;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+/* remember to define visible focus styles!
+   :focus{outline:?????;}
+   */
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: normal;
+}
+
+a {
+  display: inline-block;
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:focus-visible {
+    outline: 1px solid;
+  }
+}
+
+img {
+  display: block;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a,
+button {
+  &:focus-visible {
+    outline: 1px solid;
+  }
+}
+
+caption,
+legend {
+  display: none;
+}
+
+button {
+  box-sizing: inherit;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+}
+
+em {
+  font-style: normal;
+}
+
+/* input disabled ios 기본 css reset */
+input[type="checkbox"],
+input[type="radio"] {
+  &:disabled {
+    & + label {
+      cursor: default;
+    }
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea {
+  padding: 0;
+  appearance: none;
+
+  &:disabled {
+    opacity: 1;
+    -webkit-text-fill-color: inherit;
+  }
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+select {
+  position: relative;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+// input number 버튼 삭제
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+div,
+button,
+span,
+a,
+img {
+  image-rendering: crisp-edges;
+  image-rendering: optimize-contrast;
+} // 백그라운드 이미지 랜더링 css
+
+video {
+  width: 100%;
+  backface-visibility: hidden;
+  mask-image: radial-gradient(white, black);
+  pointer-events: none;
+
+  &.video-control {
+    pointer-events: inherit;
+  }
+}
+
+// 클릭 시 애니메이팅 일어나는 효과 제거
+[ant-click-animating-without-extra-node="true"]::after {
+  display: none;
+}
+
+[ant-click-animating] {
+  box-shadow: none;
+}

@@ -1,0 +1,14 @@
+// Font Family
+$fontFamily: 'Pretendard', sans-serif;
+
+// breakpoint
+$breakpointSM: 768px;
+$breakpointMD: 1280px;
+$maxWidthLg: 1200px;
+$baseSize: 16px;
+$vh: var(--vh, 1vh);
+$scroll: var(--scroll);
+
+// ui image root path
+$ui-rootPath: '../../images';
+$ui-publicImgPath: '/images';

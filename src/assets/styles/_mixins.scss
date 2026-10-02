@@ -1,0 +1,61 @@
+/* stylelint-disable scss/no-global-function-names */
+// ~ 359
+@mixin xs {
+    @media (max-width: 359px) {
+        @content;
+    }
+}
+
+// ~ 767
+@mixin sm {
+    @media (max-width: #{$breakpointSM - 1px}) {
+        @content;
+    }
+}
+
+// 768 ~ 1279
+@mixin md {
+    @media (min-width: #{$breakpointSM}) and (max-width: #{$breakpointMD - 1}) {
+        @content;
+    }
+}
+
+// 1280 ~
+@mixin lg {
+    @media (min-width: #{$breakpointMD}) {
+        @content;
+    }
+}
+
+@mixin content($display: block) {
+    display: $display;
+    clear: both;
+    content: '';
+}
+
+// 말줄임
+@mixin ellipsis($type: 0) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+
+    @if $type == 0 {
+        white-space: nowrap;
+        word-wrap: normal;
+        word-wrap: break-word;
+    } @else {
+        display: -webkit-box;
+        -webkit-line-clamp: $type;
+        -webkit-box-orient: vertical;
+    }
+}
+
+// font size
+@function fontsize($size) {
+    @return #{$baseSize + ($size - $baseSize)};
+}
+
+@mixin fontsizeMixin($size, $lineHeight: $size) {
+    font-size: fontsize($size);
+    line-height: $lineHeight / $size;
+}
